@@ -59,7 +59,7 @@ export function Register() {
         <button className='button-red' type="submit" disabled={isSubmitting}>Criar conta</button>
         <p>
           Tem um conta?
-          <NavLink to="/" title='Cadastrar'>
+          <NavLink to="/login" title='Cadastrar'>
             Acessar conta
           </NavLink>
         </p>

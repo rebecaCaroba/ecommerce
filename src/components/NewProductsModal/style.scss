@@ -51,7 +51,7 @@
     button[type="submit"] {
       height: 46px;
       border: 0;
-      background: $c-secundary;
+      background: $c-secondary;
       color: $c-gray-100;
       border-radius: 6px;
       font-weight: 700;
@@ -61,7 +61,7 @@
       cursor: pointer;
   
       &:hover {
-        background: $c-secundary;
+        background: $c-secondary;
       }
     }
   }

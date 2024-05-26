@@ -2,7 +2,8 @@
 
 .login-form {
     margin-top: 2rem;
-    width: 25%;
+    width: 100%;
+    max-width: 450px;
     display: flex;
     flex-direction: column;
     justify-content: center;
