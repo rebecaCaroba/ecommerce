@@ -56,7 +56,7 @@ export function Register() {
         <input type="password" id="confirmPassword" {...register('confirmPassword')} />
         <span className='span-erros'>{errors.confirmPassword?.message ? errors.confirmPassword?.message : ''}</span>
 
-        <button type="submit" disabled={isSubmitting}>Criar conta</button>
+        <button className='button-red' type="submit" disabled={isSubmitting}>Criar conta</button>
         <p>
           Tem um conta?
           <NavLink to="/" title='Cadastrar'>

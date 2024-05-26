@@ -1,0 +1,20 @@
+@import '../../../styles/config/variables';
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    button {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        background-color: $c-secundary;
+        border: 0;
+        color: $c-gray-100;
+        padding: 0.5rem;
+        border-radius: 6px;
+        font-weight: bold;
+        font-size: 1rem;
+    }
+}

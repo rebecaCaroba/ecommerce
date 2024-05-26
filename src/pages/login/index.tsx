@@ -58,7 +58,7 @@ export function Login() {
           <input type="password" id="password" {...register('password')} />
           <span className='span-erros'>{errors.password?.message ? errors.password?.message : ''}</span>
           
-          <button type="submit" disabled={isSubmitting}>Entrar</button>
+          <button className='button-red' type="submit" disabled={isSubmitting}>Entrar</button>
           {/* {data ? <p>{data.message}</p> : <p>Loading...</p>} */}
           <p>
             Não tem um conta?
