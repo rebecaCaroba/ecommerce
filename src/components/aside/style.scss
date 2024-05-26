@@ -26,6 +26,9 @@ aside {
     text-decoration: none;
     color: $c-gray-200;
   }
+  .sidebar-nav a:hover {
+    color: $c-gray-100;
+  }
   
   .sidebar-nav h2 {
     margin-top: 20px;

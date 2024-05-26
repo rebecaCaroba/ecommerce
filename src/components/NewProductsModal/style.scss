@@ -2,14 +2,14 @@
 
 .overlay {
     position: fixed;
-    width: 100vw;
-    height: 100vh;
     inset: 0;
     background: rgba(0, 0, 0, 0.75);
   }
   
   .content-modal {
-    min-width: 32rem;
+    width: 100%;
+    max-width: 32rem;
+    height: 44rem;
     border-radius: 6px;
     padding: 2.5rem 3rem;
     background: $c-gray-800;
@@ -56,7 +56,6 @@
       border-radius: 6px;
       font-weight: 700;
       padding: 0 1.25rem;
-      margin-top: 1.5rem;
       transition: background-color 0.2s;
       cursor: pointer;
   
