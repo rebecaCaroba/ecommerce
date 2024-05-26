@@ -17,7 +17,20 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    height: 100vh;   
+    height: 100vh;
+}
+
+.app {
+    display: flex;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+.content.with-sidebar {
+    margin-left: 250px;
 }
 
 body {
