@@ -1,0 +1,24 @@
+@import '../styles/config/variables';
+
+input {
+    background-color: $c-gray-100;
+    color: $c-gray-900;
+    border: 0;
+    border-radius: 8px;
+    padding: 14px;
+}
+
+button {
+    background-color: $c-red-200;
+    border: 0;
+    border-radius: 8px;
+    padding: 20px;
+    color: $c-gray-100;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+a {
+    color: $c-gray-100;
+    font-weight: bold;
+}

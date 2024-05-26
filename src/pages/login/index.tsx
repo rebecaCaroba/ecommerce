@@ -1,5 +1,5 @@
 import './style.scss'
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import * as z from 'zod'
@@ -26,6 +26,8 @@ export function Login() {
     resolver: zodResolver(LoginAccountFormSchema),
   })
 
+  const navigate = useNavigate();
+
   // const [data, setData] = useState<Data | null>(null);
 
   async function handleLoginAccount(data: LoginAccountInputs) {
@@ -41,36 +43,32 @@ export function Login() {
     //   }
     //   console.log(err)
     // }
+
+    navigate('/admin')
   }
 
   return (
-    <>
+      <div className="container">
       <h1>Olá novamente</h1>
-      <form onSubmit={handleSubmit(handleLoginAccount)} className="login-form">
-        <label htmlFor="username">Nome de usuário</label>
-        <input type="text" id="username" {...register('username')} />
-        <span className='span-erros'>{errors.username?.message ? errors.username?.message : ''}</span>
+        <form onSubmit={handleSubmit(handleLoginAccount)} className="login-form">
+          <label htmlFor="username">Nome de usuário</label>
+          <input type="text" id="username" {...register('username')} />
+          <span className='span-erros'>{errors.username?.message ? errors.username?.message : ''}</span>
+          <label htmlFor="password">Senha</label>
+          <input type="password" id="password" {...register('password')} />
+          <span className='span-erros'>{errors.password?.message ? errors.password?.message : ''}</span>
+          
+          <button type="submit" disabled={isSubmitting}>Entrar</button>
+          {/* {data ? <p>{data.message}</p> : <p>Loading...</p>} */}
+          <p>
+            Não tem um conta?
+            <NavLink to="/register" title='Cadastrar'>
+              Criar conta
+            </NavLink>
+          </p>
+        </form>
+      </div>
 
-        <label htmlFor="password">Senha</label>
-        <input type="text" id="password" {...register('password')} />
-        <span className='span-erros'>{errors.password?.message ? errors.password?.message : ''}</span>
-        <NavLink to="/recovery" title='Cadastrar'>
-          Esqueceu a senha?
-        </NavLink>
-
-        <button type="submit" disabled={isSubmitting}>Entrar</button>
-
-        {/* {data ? <p>{data.message}</p> : <p>Loading...</p>} */}
-        <p>
-          Não tem um conta?
-          <NavLink to="/register" title='Cadastrar'>
-            Criar conta
-          </NavLink>
-        </p>
-      </form>
-
-
-    </>
   )
 }
 
