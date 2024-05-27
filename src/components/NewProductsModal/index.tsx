@@ -31,7 +31,7 @@ export function NewProductsModal() {
         setValue('imageProd', base64)
     }
 
-    async function handleNewProduct(data: any) {
+    async function handleNewProduct(data: NewProductInputs) {
         console.log(data)
     }
 
@@ -57,8 +57,8 @@ export function NewProductsModal() {
                             <textarea
                                 {...register('desc')}
                                 placeholder="Descrição.."
-                                cols={15}
-                                rows={15}
+                                cols={10}
+                                rows={12}
                             />
                         </div>
                         <div className="form-group">

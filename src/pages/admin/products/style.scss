@@ -18,3 +18,46 @@ header {
         font-size: 1rem;
     }
 }
+
+.products-container {
+    width: 100%;
+    margin: 4rem auto 0;
+    padding: 0 1.5rem;
+}
+
+.products-table {
+    width: 100%;
+    margin-top: 1.5rem;
+  
+    div {
+      display: grid;
+      grid-template-columns: 5fr 2fr 2fr 1fr 1fr;
+      align-items: center;
+      gap: 8px;
+      margin: 10px 0;
+      padding: 1.25rem 2rem;
+      background: $c-gray-600;
+  
+      &:first-child {
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+      }
+  
+      &:last-child {
+        border-bottom-right-radius: 6px;
+        border-bottom-left-radius: 6px;
+      }
+    }
+  
+    span {
+      text-align: left;
+    }
+
+    button {
+        background-color: $c-red-200;
+        color: $c-gray-100;
+        border: 0;
+        padding: 0.5rem;
+        cursor: pointer;
+    }
+}

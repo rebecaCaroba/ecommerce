@@ -39,13 +39,17 @@
       color: $c-gray-200;
       padding: 1rem;
   
-      &::placeholder {
-        color: $c-gray-200;
-      }
+      
     }
 
     textarea {
         resize: none;
+        background: $c-gray-900;
+        color: $c-gray-200;
+        border: 0;
+        padding: 1rem;
+        border-radius: 6px;
+
     }
   
     button[type="submit"] {
