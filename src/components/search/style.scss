@@ -1,0 +1,26 @@
+@import '../../styles/config/variables';
+
+.search-form {
+    width: 1200px;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 2rem auto 0;
+    gap: 1rem;
+
+    input {
+        background-color: $c-gray-600;
+        width: 100%;
+        color: $c-gray-100;
+    }
+
+    button {
+        height: 46px;
+        width: 8rem;
+        border: 0;
+        border-radius: 8px;
+        background: $c-secondary;
+        color: $c-gray-100;
+        cursor: pointer;
+    }
+}

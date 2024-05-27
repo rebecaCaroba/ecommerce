@@ -3,6 +3,7 @@ import * as Dialog from '@radix-ui/react-dialog'
 import { IoMdAddCircleOutline } from "react-icons/io";
 import Icon from '../../../assets/react.svg'
 import './style.scss'
+import { Search } from "../../../components/search";
 
 export function Products() {
   return (
@@ -20,7 +21,7 @@ export function Products() {
         </Dialog.Root>
       </header>
       <section>
-        Search
+        <Search />
       </section>
       <main className="products-container">
         <section className="products-table">
